@@ -4,7 +4,7 @@ import { RouterModule } from '@nestjs/core';
 import { ThrottlerModule } from '@nestjs/throttler';
 import { appRoutes } from 'app.routes';
 import { throttlerConfig } from 'app/config/throttler.config';
-// import { DatabaseModule } from 'app/modules/database/database.module';
+import { GalleryModule } from 'app/modules/gallery/gallery.module';
 import { HelloModule } from 'app/modules/hello/hello.module';
 
 @Module({
@@ -14,7 +14,7 @@ import { HelloModule } from 'app/modules/hello/hello.module';
         ThrottlerModule.forRoot({ throttlers: throttlerConfig}),
         // Custom modules
         HelloModule,
-        // DatabaseModule,
+        GalleryModule,
         // Router modules0
         RouterModule.register(appRoutes)
     ],

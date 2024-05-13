@@ -1,5 +1,5 @@
 import { Routes } from "@nestjs/core";
-// import { DatabaseModule } from "app/modules/database/database.module";
+import { GalleryModule } from "app/modules/gallery/gallery.module";
 import { HelloModule } from "app/modules/hello/hello.module";
 
 export const appRoutes: Routes = [
@@ -7,7 +7,7 @@ export const appRoutes: Routes = [
         path: 'api',
         children: [
             { path: 'hello', module: HelloModule },
-            // { path: 'database', module: DatabaseModule },
+            { path: 'gallery', module: GalleryModule },
         ]
     }
 ]
